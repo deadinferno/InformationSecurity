@@ -10,6 +10,7 @@ namespace InformationSecurity
     {
         static void Main(string[] args)
         {
+
         }
     }
 }

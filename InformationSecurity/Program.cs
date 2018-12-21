@@ -12,27 +12,24 @@
  */
 
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace InformationSecurity
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-
-            String str = "абвгдежзийклмнопрстуфхцчшщъыьэюя";
-            string[] table = new string[str.Length];
-
-            table[0] = "иди нахуй";
-            table[1] = "мудила ты бля";
-            table[3] = "ууууу тупые дефки";
-
-            //string[] a = new string[str.Length];
-
-            String input;
-            System.Console.Write("Введите строку\nВВОД: ");
-            input = System.Console.ReadLine();
-
+            Stopwatch watch = new Stopwatch();
+            List<char> keyRow = new List<char>();
+            keyRow.AddRange("абвгдежзийклмнопрстуфхцчшщъыьэюя");
+            List<char>[] table = new List<char>[keyRow.Count];
+            for (int i = 0; i < table.Length; i++)
+            {
+                table[i] = new List<char>();
+                table[i].AddRange(keyRow);
+            }
         }
     }
 }

@@ -20,7 +20,7 @@ namespace lab01
             key.Add(Convert.ToInt32(Console.ReadLine()));
 
             List<char> dict_table = new List<char>();
-            dict_table.AddRange("йцукенгшщзхъфывапролджэячсмитьбю ");
+            dict_table.AddRange("йцукенгшщзхъфывапролджэячсмитьбю -");
 
             List<int> affine_table = new List<int>();
             for(int i = 0; i < dict_table.Count; i++)
@@ -89,8 +89,17 @@ namespace lab01
                     break;
                 Console.Write(decrString[i]);
             }
-
+            Console.WriteLine();
+            Console.ReadLine();
         }
     }
-
 }
+
+/*
+ * 
+ * 
+ * 3)	аффинная система подстановок Цезаря;
+ * 10)	шифрующие таблицы с двойной перестановкой по ключу;
+ * 
+ * 
+ */
